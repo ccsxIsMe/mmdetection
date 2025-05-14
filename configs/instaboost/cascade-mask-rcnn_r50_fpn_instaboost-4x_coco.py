@@ -1,4 +1,4 @@
-_base_ = '../cascade_rcnn/cascade-mask-rcnn_r50_fpn_1x_coco.py'
+_base_ = '../cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco1.py'
 
 train_pipeline = [
     dict(type='LoadImageFromFile', backend_args={{_base_.backend_args}}),

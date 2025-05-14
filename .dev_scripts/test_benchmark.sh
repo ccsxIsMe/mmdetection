@@ -9,10 +9,10 @@ echo 'configs/autoassign/autoassign_r50-caffe_fpn_1x_coco.py' &
 GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK tools/slurm_test.sh $PARTITION autoassign_r50-caffe_fpn_1x_coco configs/autoassign/autoassign_r50-caffe_fpn_1x_coco.py $CHECKPOINT_DIR/auto_assign_r50_fpn_1x_coco_20210413_115540-5e17991f.pth --work-dir $WORK_DIR/autoassign_r50-caffe_fpn_1x_coco --cfg-option env_cfg.dist_cfg.port=29667  &
 echo 'configs/carafe/faster-rcnn_r50_fpn-carafe_1x_coco.py' &
 GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK tools/slurm_test.sh $PARTITION faster-rcnn_r50_fpn-carafe_1x_coco configs/carafe/faster-rcnn_r50_fpn-carafe_1x_coco.py $CHECKPOINT_DIR/faster_rcnn_r50_fpn_carafe_1x_coco_bbox_mAP-0.386_20200504_175733-385a75b7.pth --work-dir $WORK_DIR/faster-rcnn_r50_fpn-carafe_1x_coco --cfg-option env_cfg.dist_cfg.port=29668  &
-echo 'configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py' &
-GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK tools/slurm_test.sh $PARTITION cascade-rcnn_r50_fpn_1x_coco configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py $CHECKPOINT_DIR/cascade_rcnn_r50_fpn_1x_coco_20200316-3dc56deb.pth --work-dir $WORK_DIR/cascade-rcnn_r50_fpn_1x_coco --cfg-option env_cfg.dist_cfg.port=29669  &
-echo 'configs/cascade_rcnn/cascade-mask-rcnn_r50_fpn_1x_coco.py' &
-GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK tools/slurm_test.sh $PARTITION cascade-mask-rcnn_r50_fpn_1x_coco configs/cascade_rcnn/cascade-mask-rcnn_r50_fpn_1x_coco.py $CHECKPOINT_DIR/cascade_mask_rcnn_r50_fpn_1x_coco_20200203-9d4dcb24.pth --work-dir $WORK_DIR/cascade-mask-rcnn_r50_fpn_1x_coco --cfg-option env_cfg.dist_cfg.port=29670  &
+echo 'configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco1.py' &
+GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK tools/slurm_test.sh $PARTITION cascade-rcnn_r50_fpn_1x_coco configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco1.py $CHECKPOINT_DIR/cascade_rcnn_r50_fpn_1x_coco_20200316-3dc56deb.pth --work-dir $WORK_DIR/cascade-rcnn_r50_fpn_1x_coco --cfg-option env_cfg.dist_cfg.port=29669  &
+echo 'configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco1.py' &
+GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK tools/slurm_test.sh $PARTITION cascade-mask-rcnn_r50_fpn_1x_coco configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco1.py $CHECKPOINT_DIR/cascade_mask_rcnn_r50_fpn_1x_coco_20200203-9d4dcb24.pth --work-dir $WORK_DIR/cascade-mask-rcnn_r50_fpn_1x_coco --cfg-option env_cfg.dist_cfg.port=29670  &
 echo 'configs/cascade_rpn/cascade-rpn_faster-rcnn_r50-caffe_fpn_1x_coco.py' &
 GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK tools/slurm_test.sh $PARTITION cascade-rpn_faster-rcnn_r50-caffe_fpn_1x_coco configs/cascade_rpn/cascade-rpn_faster-rcnn_r50-caffe_fpn_1x_coco.py $CHECKPOINT_DIR/crpn_faster_rcnn_r50_caffe_fpn_1x_coco-c8283cca.pth --work-dir $WORK_DIR/cascade-rpn_faster-rcnn_r50-caffe_fpn_1x_coco --cfg-option env_cfg.dist_cfg.port=29671  &
 echo 'configs/centernet/centernet_r18-dcnv2_8xb16-crop512-140e_coco.py' &
@@ -83,8 +83,8 @@ echo 'configs/libra_rcnn/libra-faster-rcnn_r50_fpn_1x_coco.py' &
 GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK tools/slurm_test.sh $PARTITION libra-faster-rcnn_r50_fpn_1x_coco configs/libra_rcnn/libra-faster-rcnn_r50_fpn_1x_coco.py $CHECKPOINT_DIR/libra_faster_rcnn_r50_fpn_1x_coco_20200130-3afee3a9.pth --work-dir $WORK_DIR/libra-faster-rcnn_r50_fpn_1x_coco --cfg-option env_cfg.dist_cfg.port=29704  &
 echo 'configs/mask2former/mask2former_r50_8xb2-lsj-50e_coco-panoptic.py' &
 GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK tools/slurm_test.sh $PARTITION mask2former_r50_8xb2-lsj-50e_coco-panoptic configs/mask2former/mask2former_r50_8xb2-lsj-50e_coco-panoptic.py $CHECKPOINT_DIR/mask2former_r50_lsj_8x2_50e_coco-panoptic_20220326_224516-11a44721.pth --work-dir $WORK_DIR/mask2former_r50_8xb2-lsj-50e_coco-panoptic --cfg-option env_cfg.dist_cfg.port=29705  &
-echo 'configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco.py' &
-GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK tools/slurm_test.sh $PARTITION mask-rcnn_r50_fpn_1x_coco configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco.py $CHECKPOINT_DIR/mask_rcnn_r50_fpn_1x_coco_20200205-d4b0c5d6.pth --work-dir $WORK_DIR/mask-rcnn_r50_fpn_1x_coco --cfg-option env_cfg.dist_cfg.port=29706  &
+echo 'configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco1.py' &
+GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK tools/slurm_test.sh $PARTITION mask-rcnn_r50_fpn_1x_coco configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco1.py $CHECKPOINT_DIR/mask_rcnn_r50_fpn_1x_coco_20200205-d4b0c5d6.pth --work-dir $WORK_DIR/mask-rcnn_r50_fpn_1x_coco --cfg-option env_cfg.dist_cfg.port=29706  &
 echo 'configs/maskformer/maskformer_r50_ms-16xb1-75e_coco.py' &
 GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK tools/slurm_test.sh $PARTITION maskformer_r50_ms-16xb1-75e_coco configs/maskformer/maskformer_r50_ms-16xb1-75e_coco.py $CHECKPOINT_DIR/maskformer_r50_mstrain_16x1_75e_coco_20220221_141956-bc2699cb.pth --work-dir $WORK_DIR/maskformer_r50_ms-16xb1-75e_coco --cfg-option env_cfg.dist_cfg.port=29707  &
 echo 'configs/ms_rcnn/ms-rcnn_r50-caffe_fpn_1x_coco.py' &

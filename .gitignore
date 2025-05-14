@@ -121,3 +121,9 @@ work_dirs/
 *.pth
 *.py~
 *.sh~
+
+coco/
+data/Autokary2022/
+data/Autokary2022_1600x1600/
+data/coco_old/
+work_dirs/

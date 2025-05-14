@@ -425,7 +425,7 @@ log_processor = dict(by_epoch=False)
 当 `_base_` 为文件路径字符串时，表示继承一个配置文件的内容。
 
 ```python
-_base_ = './mask-rcnn_r50_fpn_1x_coco.py'
+_base_ = './mask-rcnn_r50_fpn_1x_coco1.py'
 ```
 
 当 `_base_` 是多个文件路径的列表时，表示继承多个文件。
@@ -467,7 +467,7 @@ model = dict(
 基础配置的 `Mask R-CNN` 使用 `ResNet-50`，在需要将主干网络改成 `HRNet` 的时候，因为 `HRNet` 和 `ResNet` 中有不同的字段，需要使用 `_delete_=True` 将新的键去替换 `backbone` 域内所有老的键。
 
 ```python
-_base_ = '../mask_rcnn/mask-rcnn_r50_fpn_1x_coco.py'
+_base_ = '../mask_rcnn/mask-rcnn_r50_fpn_1x_coco1.py'
 model = dict(
     backbone=dict(
         _delete_=True,
@@ -506,7 +506,7 @@ model = dict(
 配置文件里会使用一些中间变量，例如数据集里的 `train_pipeline`/`test_pipeline`。我们在定义新的 `train_pipeline`/`test_pipeline` 之后，需要将它们传递到 `data` 里。例如，我们想在训练或测试时，改变 Mask R-CNN 的多尺度策略 (multi scale strategy)，`train_pipeline`/`test_pipeline` 是我们想要修改的中间变量。
 
 ```python
-_base_ = './mask-rcnn_r50_fpn_1x_coco.py'
+_base_ = './mask-rcnn_r50_fpn_1x_coco1.py'
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
@@ -535,7 +535,7 @@ test_dataloader = dict(dataset=dict(pipeline=test_pipeline))
 同样的，如果我们想从 `SyncBN` 切换到 `BN` 或者 `MMSyncBN`，我们需要修改配置文件里的每一个  `norm_cfg`。
 
 ```python
-_base_ = './mask-rcnn_r50_fpn_1x_coco.py'
+_base_ = './mask-rcnn_r50_fpn_1x_coco1.py'
 norm_cfg = dict(type='BN', requires_grad=True)
 model = dict(
     backbone=dict(norm_cfg=norm_cfg),
@@ -548,7 +548,7 @@ model = dict(
 如果用户希望在当前配置中复用 base 文件中的变量，则可以通过使用 `{{_base_.xxx}}` 的方式来获取对应变量的拷贝。例如：
 
 ```python
-_base_ = './mask-rcnn_r50_fpn_1x_coco.py'
+_base_ = './mask-rcnn_r50_fpn_1x_coco1.py'
 
 a = {{_base_.model}}  # 变量 a 等于 _base_ 中定义的 model
 ```

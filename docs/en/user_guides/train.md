@@ -138,7 +138,7 @@ The basic usage is as follows.
 Below is an example of using 16 GPUs to train Mask R-CNN on a Slurm partition named _dev_, and set the work-dir to some shared file systems.
 
 ```shell
-GPUS=16 ./tools/slurm_train.sh dev mask_r50_1x configs/mask-rcnn_r50_fpn_1x_coco.py /nfs/xxxx/mask_rcnn_r50_fpn_1x
+GPUS=16 ./tools/slurm_train.sh dev mask_r50_1x configs/mask-rcnn_r50_fpn_1x_coco1.py /nfs/xxxx/mask_rcnn_r50_fpn_1x
 ```
 
 You can check [the source code](../../../tools/slurm_train.sh) to review full arguments and environment variables.

@@ -15,7 +15,7 @@ model = dict(
             num_convs=4,
             in_channels=256,
             conv_out_channels=256,
-            num_classes=183,
+            num_classes=24,  # num_classes=183 ！！！
             loss_seg=dict(
                 type='CrossEntropyLoss', ignore_index=255, loss_weight=0.2))))
 

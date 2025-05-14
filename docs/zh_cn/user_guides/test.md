@@ -76,7 +76,7 @@ bash tools/dist_test.sh \
 
    ```shell
    ./tools/dist_test.sh \
-       configs/mask-rcnn_r50_fpn_1x_coco.py \
+       configs/mask-rcnn_r50_fpn_1x_coco1.py \
        checkpoints/mask_rcnn_r50_fpn_1x_coco_20200205-d4b0c5d6.pth \
        8 \
        --out results.pkl
@@ -86,7 +86,7 @@ bash tools/dist_test.sh \
 
    ```shell
    ./tools/dist_test.sh \
-       configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco.py \
+       configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco1.py \
        checkpoints/mask_rcnn_r50_fpn_1x_coco_20200205-d4b0c5d6.pth \
        8
    ```
@@ -164,7 +164,7 @@ bash tools/dist_test.sh \
 
 ```sh
 ./tools/dist_test.sh \
-    configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco.py \
+    configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco1.py \
     checkpoints/mask_rcnn_r50_fpn_1x_coco_20200205-d4b0c5d6.pth \
     8
 ```

@@ -434,7 +434,7 @@ By setting the `_base_` field, we can set which files the current configuration 
 When `_base_` is a string of a file path, it means inheriting the contents from one config file.
 
 ```python
-_base_ = './mask-rcnn_r50_fpn_1x_coco.py'
+_base_ = './mask-rcnn_r50_fpn_1x_coco1.py'
 ```
 
 When `_base_` is a list of multiple file paths, it means inheriting from multiple files.
@@ -477,7 +477,7 @@ model = dict(
 `ResNet` and `HRNet` use different keywords to construct.
 
 ```python
-_base_ = '../mask_rcnn/mask-rcnn_r50_fpn_1x_coco.py'
+_base_ = '../mask_rcnn/mask-rcnn_r50_fpn_1x_coco1.py'
 model = dict(
     backbone=dict(
         _delete_=True,
@@ -520,7 +520,7 @@ It's worth noting that when modifying intermediate variables in the children con
 For example, we would like to use a multi-scale strategy to train a Mask R-CNN. `train_pipeline`/`test_pipeline` are intermediate variables we would like to modify.
 
 ```python
-_base_ = './mask-rcnn_r50_fpn_1x_coco.py'
+_base_ = './mask-rcnn_r50_fpn_1x_coco1.py'
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
@@ -549,7 +549,7 @@ We first define the new `train_pipeline`/`test_pipeline` and pass them into data
 Similarly, if we would like to switch from `SyncBN` to `BN` or `MMSyncBN`, we need to substitute every `norm_cfg` in the config.
 
 ```python
-_base_ = './mask-rcnn_r50_fpn_1x_coco.py'
+_base_ = './mask-rcnn_r50_fpn_1x_coco1.py'
 norm_cfg = dict(type='BN', requires_grad=True)
 model = dict(
     backbone=dict(norm_cfg=norm_cfg),
@@ -562,7 +562,7 @@ model = dict(
 If the users want to reuse the variables in the base file, they can get a copy of the corresponding variable by using `{{_base_.xxx}}`. E.g:
 
 ```python
-_base_ = './mask-rcnn_r50_fpn_1x_coco.py'
+_base_ = './mask-rcnn_r50_fpn_1x_coco1.py'
 
 a = {{_base_.model}} # Variable `a` is equal to the `model` defined in `_base_`
 ```

@@ -27,14 +27,14 @@ carafe = dict(
 )
 cascade_rcnn = [
     dict(
-        config='configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py',
+        config='configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco1.py',
         checkpoint='cascade_rcnn_r50_fpn_1x_coco_20200316-3dc56deb.pth',
         eval='bbox',
         url='https://download.openmmlab.com/mmdetection/v2.0/cascade_rcnn/cascade_rcnn_r50_fpn_1x_coco/cascade_rcnn_r50_fpn_1x_coco_20200316-3dc56deb.pth', # noqa
         metric=dict(bbox_mAP=40.3),
     ),
     dict(
-        config='configs/cascade_rcnn/cascade-mask-rcnn_r50_fpn_1x_coco.py',
+        config='configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco1.py',
         checkpoint='cascade_mask_rcnn_r50_fpn_1x_coco_20200203-9d4dcb24.pth',
         url='https://download.openmmlab.com/mmdetection/v2.0/cascade_rcnn/cascade_mask_rcnn_r50_fpn_1x_coco/cascade_mask_rcnn_r50_fpn_1x_coco_20200203-9d4dcb24.pth', # noqa
         eval=['bbox', 'segm'],
@@ -287,7 +287,7 @@ mask2former = dict(
     metric=dict(PQ=51.9, bbox_mAP=44.8, segm_mAP=41.9),
 )
 mask_rcnn = dict(
-    config='configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco.py',
+    config='configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco1.py',
     checkpoint='mask_rcnn_r50_fpn_1x_coco_20200205-d4b0c5d6.pth',
     url='https://download.openmmlab.com/mmdetection/v2.0/mask_rcnn/mask_rcnn_r50_fpn_1x_coco/mask_rcnn_r50_fpn_1x_coco_20200205-d4b0c5d6.pth', # noqa
     eval=['bbox', 'segm'],

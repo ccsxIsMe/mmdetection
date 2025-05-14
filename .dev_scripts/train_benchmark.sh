@@ -10,10 +10,10 @@ echo 'configs/autoassign/autoassign_r50-caffe_fpn_1x_coco.py' &
 GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK ./tools/slurm_train.sh $PARTITION autoassign_r50-caffe_fpn_1x_coco configs/autoassign/autoassign_r50-caffe_fpn_1x_coco.py $WORK_DIR/autoassign_r50-caffe_fpn_1x_coco --cfg-options default_hooks.checkpoint.max_keep_ckpts=1 &
 echo 'configs/carafe/faster-rcnn_r50_fpn-carafe_1x_coco.py' &
 GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK ./tools/slurm_train.sh $PARTITION faster-rcnn_r50_fpn-carafe_1x_coco configs/carafe/faster-rcnn_r50_fpn-carafe_1x_coco.py $WORK_DIR/faster-rcnn_r50_fpn-carafe_1x_coco --cfg-options default_hooks.checkpoint.max_keep_ckpts=1 &
-echo 'configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py' &
-GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK ./tools/slurm_train.sh $PARTITION cascade-rcnn_r50_fpn_1x_coco configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py $WORK_DIR/cascade-rcnn_r50_fpn_1x_coco --cfg-options default_hooks.checkpoint.max_keep_ckpts=1 &
-echo 'configs/cascade_rcnn/cascade-mask-rcnn_r50_fpn_1x_coco.py' &
-GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK ./tools/slurm_train.sh $PARTITION cascade-mask-rcnn_r50_fpn_1x_coco configs/cascade_rcnn/cascade-mask-rcnn_r50_fpn_1x_coco.py $WORK_DIR/cascade-mask-rcnn_r50_fpn_1x_coco --cfg-options default_hooks.checkpoint.max_keep_ckpts=1 &
+echo 'configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco1.py' &
+GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK ./tools/slurm_train.sh $PARTITION cascade-rcnn_r50_fpn_1x_coco configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco1.py $WORK_DIR/cascade-rcnn_r50_fpn_1x_coco --cfg-options default_hooks.checkpoint.max_keep_ckpts=1 &
+echo 'configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco1.py' &
+GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK ./tools/slurm_train.sh $PARTITION cascade-mask-rcnn_r50_fpn_1x_coco configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco1.py $WORK_DIR/cascade-mask-rcnn_r50_fpn_1x_coco --cfg-options default_hooks.checkpoint.max_keep_ckpts=1 &
 echo 'configs/cascade_rpn/cascade-rpn_faster-rcnn_r50-caffe_fpn_1x_coco.py' &
 GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK ./tools/slurm_train.sh $PARTITION cascade-rpn_faster-rcnn_r50-caffe_fpn_1x_coco configs/cascade_rpn/cascade-rpn_faster-rcnn_r50-caffe_fpn_1x_coco.py $WORK_DIR/cascade-rpn_faster-rcnn_r50-caffe_fpn_1x_coco --cfg-options default_hooks.checkpoint.max_keep_ckpts=1 &
 echo 'configs/centernet/centernet_r18-dcnv2_8xb16-crop512-140e_coco.py' &
@@ -92,8 +92,8 @@ echo 'configs/libra_rcnn/libra-faster-rcnn_r50_fpn_1x_coco.py' &
 GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK ./tools/slurm_train.sh $PARTITION libra-faster-rcnn_r50_fpn_1x_coco configs/libra_rcnn/libra-faster-rcnn_r50_fpn_1x_coco.py $WORK_DIR/libra-faster-rcnn_r50_fpn_1x_coco --cfg-options default_hooks.checkpoint.max_keep_ckpts=1 &
 echo 'configs/mask2former/mask2former_r50_8xb2-lsj-50e_coco-panoptic.py' &
 GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK ./tools/slurm_train.sh $PARTITION mask2former_r50_8xb2-lsj-50e_coco-panoptic configs/mask2former/mask2former_r50_8xb2-lsj-50e_coco-panoptic.py $WORK_DIR/mask2former_r50_8xb2-lsj-50e_coco-panoptic --cfg-options default_hooks.checkpoint.max_keep_ckpts=1 &
-echo 'configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco.py' &
-GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK ./tools/slurm_train.sh $PARTITION mask-rcnn_r50_fpn_1x_coco configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco.py $WORK_DIR/mask-rcnn_r50_fpn_1x_coco --cfg-options default_hooks.checkpoint.max_keep_ckpts=1 &
+echo 'configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco1.py' &
+GPUS=8  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK ./tools/slurm_train.sh $PARTITION mask-rcnn_r50_fpn_1x_coco configs/mask_rcnn/mask-rcnn_r50_fpn_1x_coco1.py $WORK_DIR/mask-rcnn_r50_fpn_1x_coco --cfg-options default_hooks.checkpoint.max_keep_ckpts=1 &
 echo 'configs/maskformer/maskformer_r50_ms-16xb1-75e_coco.py' &
 GPUS=16  GPUS_PER_NODE=8  CPUS_PER_TASK=$CPUS_PRE_TASK ./tools/slurm_train.sh $PARTITION maskformer_r50_ms-16xb1-75e_coco configs/maskformer/maskformer_r50_ms-16xb1-75e_coco.py $WORK_DIR/maskformer_r50_ms-16xb1-75e_coco --cfg-options default_hooks.checkpoint.max_keep_ckpts=1 &
 echo 'configs/ms_rcnn/ms-rcnn_r50-caffe_fpn_1x_coco.py' &
